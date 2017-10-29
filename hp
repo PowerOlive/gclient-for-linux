@@ -1,2 +1,5 @@
 #!/bin/bash
-http_proxy=http://127.0.0.1:3143 https_proxy=http://127.0.0.1:3143 $*
+export http_proxy=http://127.0.0.1:3143
+export https_proxy=http://127.0.0.1:3143
+export no_proxy="m10.music.126.net,10.*.*.*,192.168.*.*,*.local,localhost,127.0.0.1"
+$*
